@@ -54,7 +54,8 @@ module Concurrency
     end
     
     def self.get_rate(from, to)
-        url = "https://free.currencyconverterapi.com/api/v3/convert?q=#{from}_#{to}&compact=ultra"
+        api_key = Concurrency.configuration.api_key
+        url = "https://free.currencyconverterapi.com/api/v3/convert?apiKey=#{api_key}&q=#{from}_#{to}&compact=ultra"
         uri = URI(url)
         response = Net::HTTP.get(uri)
         if response == nil
