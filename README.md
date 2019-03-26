@@ -78,8 +78,9 @@ In order to establish default conversion currencies, paste the following code in
 
 ```ruby
     Concurrency.configure do |config|
-        config.from_currency = "USD"    #Default value
-        config.to_currency = "INR"      #Default value
+        config.api_key = "<YOUR API KEY>"
+        config.from_currency = "USD"        #Default value
+        config.to_currency = "INR"          #Default value
     end
 ```
 ```ruby
